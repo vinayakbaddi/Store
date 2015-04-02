@@ -39,7 +39,10 @@
     </div>
 
     @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+        @Scripts.Render("~/bundles/bootstrap")
+    <!-- Note: Used below without bundling-->
+        <script src="~/Scripts/Fruit.js"></script>
+
     @RenderSection("scripts", required: false)
 </body>
 </html>

@@ -35,6 +35,7 @@ namespace Store.FruitWeb.Controllers
         {
             var fruits = Enum.GetValues(typeof(EnumFruitNames)).Cast<EnumFruitNames>().Select(x => new SelectListItem() { Text = x.ToString(), Value = x.ToString() }).ToList();
             var fruitModel = new FruitModel() { FruitList = fruits };
+            fruitModel.SalesDate = DateTime.Now;
             return View(fruitModel);
         }
 
