@@ -27,5 +27,10 @@ namespace Store.FruitWeb.Models
         }
 
         public List<SelectListItem> FruitList { get; set; }
+
+        public DateTime StartDate { get; set; }
+
+        public DateTime EndDate { get; set; }
+
     }
 }

@@ -30,5 +30,10 @@ namespace FruitService
             return fruitRepository.GetAll();
         }
 
+        public IList<FruitDTO> GetByDate(DateTime startDate, DateTime endDate)
+        {
+            return fruitRepository.GetByDate(startDate, endDate);
+        }
+
     }
 }

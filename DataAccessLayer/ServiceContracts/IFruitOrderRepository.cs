@@ -12,5 +12,7 @@ namespace FruitRepository.ServiceContracts
         void Add(FruitDTO fruit);
 
         IList<FruitDTO> GetAll();
+
+        IList<FruitDTO> GetByDate(DateTime startDate, DateTime endDate);
     }
 }

@@ -80,7 +80,7 @@ namespace Store.FruitWeb.Controllers
         public ActionResult OrderList(FruitModel fruitModel)
         {
 
-            var fruitList = fruitOrderService.GetAll().ToList();
+            var fruitList = fruitOrderService.GetByDate(fruitModel.StartDate,fruitModel.EndDate).ToList();
             var fruitListModel = Mapper.Map<List<FruitDTO>, List<FruitModel>>(fruitList).ToList();
 
             return View(fruitListModel);

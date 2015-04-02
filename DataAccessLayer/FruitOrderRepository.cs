@@ -28,5 +28,13 @@ namespace FruitRepository
 
             return Mapper.Map<List<IFruit>, List<FruitDTO>>(fruitList).ToList();
         }
+
+        public IList<FruitDTO> GetByDate(DateTime startDate, DateTime endDate)
+        {
+
+            var fruitList = InMemoryStorage.FruitList.Where(x => x.SalesDate >= startDate && x.SalesDate <= endDate).ToList(); 
+
+            return Mapper.Map<List<IFruit>, List<FruitDTO>>(fruitList).ToList();
+        }
     }
 }
